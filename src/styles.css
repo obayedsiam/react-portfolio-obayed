@@ -1,0 +1,157 @@
+/* styles.css */
+
+body {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+img {
+  border-radius: 50%; /* Adjust the value as needed */
+  margin-top: 10%;
+}
+
+.navbar {
+  background-color: #ffffff;
+  margin-right: 5%;
+  text-align: right;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.left-side {
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.intro {
+  text-align: center;
+  margin-left: 0%;
+}
+
+.intro h1 {
+  margin: 0;
+}
+
+.intro p {
+  margin: 0;
+}
+
+.cta {
+  margin-top: 7%;
+  text-align: center;
+}
+
+.download-link {
+  text-decoration: none;
+}
+
+.download-button {
+  padding: 10px 20px;
+  background-color: #ce8f1c; /* Orange color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.download-button:hover {
+  background-color: #7c5c34; /* Darker shade of orange on hover */
+}
+
+.right-side img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 100px;
+  border-radius: 50%; /* Adjust the value as needed */
+}
+
+.profile-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.profile-section h2 {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social-icon {
+  margin-bottom: 10px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top: 5px solid #000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover::after,
+.social-icon:hover::before {
+  opacity: 1;
+}

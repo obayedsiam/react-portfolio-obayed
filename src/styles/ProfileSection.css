@@ -1,0 +1,198 @@
+/* ProfileSection.css */
+
+/* Section styling */
+.section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Title styling */
+h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Button styling */
+.section-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-buttons button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.section-buttons button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Experience section styling */
+/* ProfileSection.css */
+
+/* Experience section styling */
+.experience-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.job-entry {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for job title, duration, company, and location */
+.job-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.job-duration {
+ 
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.company-name {
+  font-weight: normal;
+  font-size: 18px;
+  color: #333;
+}
+
+.location {
+ 
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Styling for project work section */
+.project-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.project-details {
+  font-size: 14px;
+  color: #555;
+  text-align: justify; 
+}
+
+
+/* Education section styling */
+.education-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.education-column {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-column h3 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.education-duration {
+  font-weight: bold;
+  color: #666;
+}
+
+.education-institution {
+
+  color: #999;
+}
+
+/* Skills and Research sections styling */
+.skills-section,
+.research-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General styles for spacing */
+.section-content {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    grid-template-columns: 1fr;
+  }
+  .education-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.more-details {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.job-title {
+  font-weight: bold;
+  color: #007bff; /* Use your primary color */
+}
+
+.job-duration {
+  font-style: italic;
+  color: #666;
+}
+
+.project-details {
+  font-size: 14px;
+  color: #555;
+  text-align: justify; /* Justified text */
+}
+
+button {
+  background-color: #007bff; /* Use your primary color */
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+}

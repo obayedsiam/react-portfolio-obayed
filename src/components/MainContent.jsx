@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ExampleDoc from "../assets/CV_OF_OBAYED_BIN_MAHFUZ.pdf";
 import ProPic from "../assets/POBM.JPG";
+import { FaLinkedin, FaGithub } from "react-icons/fa"; // Import LinkedIn and GitHub icons
+import { SiLeetcode } from "react-icons/si"; // Import LeetCode icon from react-icons
 
 function MainContent() {
   const [typedText, setTypedText] = useState("");
@@ -23,20 +25,44 @@ function MainContent() {
   return (
     <div className="main-content">
       <div className="left-side">
-        <div class="social-icons">
-          <a href="#" class="social-icon" title="LinkedIn">
-            <img src="linkedin-icon.png" alt="LinkedIn" />
-          </a>
-          <a href="#" class="social-icon" title="GitHub">
-            <img src="github-icon.png" alt="GitHub" />
-          </a>
-          <a href="#" class="social-icon" title="LeetCode">
-            <img src="leetcode-icon.png" alt="LeetCode" />
-          </a>
-        </div>
         <div className="intro">
           <h1>Obayed Bin Mahfuz</h1>
           <p>Java Developer | AI Researcher (NLP)</p>
+
+          {/* Social Icons Section */}
+          <div className="social-icons">
+            <a
+              href="https://www.linkedin.com/in/obayed-bin-mahfuz-7b08b38b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: "0 10px", display: "inline-block" }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#0077b5")} // LinkedIn color on hover
+              onMouseOut={(e) => (e.currentTarget.style.color = "black")} // Reset color
+            >
+              <FaLinkedin size={30} />
+            </a>
+            <a
+              href="https://github.com/obayedsiam"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: "0 10px", display: "inline-block" }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#333")} // GitHub color on hover
+              onMouseOut={(e) => (e.currentTarget.style.color = "black")} // Reset color
+            >
+              <FaGithub size={30} />
+            </a>
+            <a
+              href="https://leetcode.com/u/user5461JF/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: "0 10px", display: "inline-block" }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#f8c200")} // LeetCode color on hover
+              onMouseOut={(e) => (e.currentTarget.style.color = "black")} // Reset color
+            >
+              <SiLeetcode size={30} />
+            </a>
+          </div>
+
           <div className="cta">
             <a href={ExampleDoc} download className="download-link">
               <button className="download-button">Download CV</button>

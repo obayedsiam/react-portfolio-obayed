@@ -1,0 +1,66 @@
+/* SectionStyles.css */
+
+/* Common Section Title Styling */
+.section-title {
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  /* Common Button Styling */
+  .project-button {
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Add some spacing between buttons */
+  }
+  
+  .project-button:hover {
+    background-color: #45a049; /* Change color on hover */
+  }
+  
+  /* Different Color Variations */
+  .project-button.blue {
+    background-color: #008cba;
+  }
+  
+  .project-button.blue:hover {
+    background-color: #007bb5;
+  }
+  
+  .project-button.red {
+    background-color: #f44336;
+  }
+  
+  .project-button.red:hover {
+    background-color: #e53935;
+  }
+  
+  .project-button.grey {
+    background-color: #e7e7e7;
+    color: black;
+  }
+  
+  .project-button.grey:hover {
+    background-color: #d4d4d4;
+  }
+  
+  /* Flex Container for Buttons */
+  .project-buttons-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  

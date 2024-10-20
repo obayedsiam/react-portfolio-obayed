@@ -3,6 +3,7 @@
 body {
   padding-left: 80px;
   padding-right: 80px;
+  padding-top: 60px; /* Adjust this value based on the navbar's height */
 }
 
 img {
@@ -10,18 +11,35 @@ img {
   margin-top: 10%;
 }
 
+/* Navbar container for alignment */
+.navbar-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 80px; /* Same padding as body */
+}
+
+/* Make the navbar fixed at the top */
 .navbar {
   background-color: #ffffff;
-  margin-right: 5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top */
+  padding: 10px 0;
   text-align: right;
 }
 
+/* Style for navbar list items */
 .navbar ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
+/* Style for navbar links */
 .navbar ul li {
-  display: inline;
   margin-right: 20px;
 }
 
@@ -30,11 +48,16 @@ img {
   text-decoration: none;
 }
 
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 .main-content {
   display: flex;
+  background-color: #f9f9f9;
   justify-content: space-between;
   align-items: center;
- 
 }
 
 .left-side {
@@ -86,13 +109,13 @@ img {
   border-radius: 50%; /* Adjust the value as needed */
 }
 
-.profile-section {
-  background-color: #f9f9f9;
+/* Generic section styling */
+.section {
   padding: 50px 0;
   text-align: center;
 }
 
-.profile-section h2 {
+.section h2 {
   margin-bottom: 20px;
 }
 
@@ -108,50 +131,17 @@ footer {
   padding: 20px 0;
 }
 
-
 .social-icons {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: center; /* Center the icons horizontally */
+  margin-top: 10px; /* Add space above the icons */
 }
 
-.social-icon {
-  margin-bottom: 10px;
+.social-icons a {
+  color: #000; /* Icon color */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.social-icon img {
-  width: 30px;
-  height: 30px;
-}
-
-.social-icon:hover::after {
-  content: attr(title);
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #000;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.social-icon:hover::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top: 5px solid #000;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.social-icon:hover::after,
-.social-icon:hover::before {
-  opacity: 1;
+.social-icons a:hover {
+  color: #0077b5; /* Change color on hover (LinkedIn color) */
 }

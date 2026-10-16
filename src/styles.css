@@ -20,13 +20,13 @@ img {
 
 /* Make the navbar fixed at the top */
 .navbar {
-  background-color: #ffffff;
+
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000; /* Ensures the navbar stays on top */
-  padding: 10px 0;
-  text-align: right;
+  padding: 10px 10px;
+  text-align: center;
 }
 
 /* Style for navbar list items */
@@ -43,9 +43,13 @@ img {
   margin-right: 20px;
 }
 
+.navbar ul li a:hover {
+  color: #000000; /* Slightly lighter color on hover */
+}
+
 .navbar ul li a {
   color: rgb(0, 0, 0);
-  text-decoration: none;
+  text-decoration: solid;
 }
 
 /* Enable smooth scrolling */
@@ -67,15 +71,17 @@ html {
 
 .intro {
   text-align: center;
+  
   margin-left: 0%;
 }
 
 .intro h1 {
   margin: 0;
+  font-size: x-large;
 }
 
 .intro p {
-  margin: 0;
+  margin-bottom: 5;
 }
 
 .cta {
@@ -93,7 +99,7 @@ html {
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition for color change */
 }

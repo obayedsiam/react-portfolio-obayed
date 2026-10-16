@@ -39,7 +39,7 @@ function MainContent() {
               onMouseOver={(e) => (e.currentTarget.style.color = "#0077b5")} // LinkedIn color on hover
               onMouseOut={(e) => (e.currentTarget.style.color = "black")} // Reset color
             >
-              <FaLinkedin size={30} />
+              <FaLinkedin size={25} />
             </a>
             <a
               href="https://github.com/obayedsiam"
@@ -49,7 +49,7 @@ function MainContent() {
               onMouseOver={(e) => (e.currentTarget.style.color = "#333")} // GitHub color on hover
               onMouseOut={(e) => (e.currentTarget.style.color = "black")} // Reset color
             >
-              <FaGithub size={30} />
+              <FaGithub size={25} />
             </a>
             <a
               href="https://leetcode.com/u/user5461JF/"
@@ -59,7 +59,7 @@ function MainContent() {
               onMouseOver={(e) => (e.currentTarget.style.color = "#f8c200")} // LeetCode color on hover
               onMouseOut={(e) => (e.currentTarget.style.color = "black")} // Reset color
             >
-              <SiLeetcode size={30} />
+              <SiLeetcode size={25} />
             </a>
           </div>
 

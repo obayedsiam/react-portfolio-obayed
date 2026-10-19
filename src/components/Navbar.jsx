@@ -47,14 +47,14 @@ function Navbar({ theme, toggleTheme }) {
     <header className={`navbar-header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container navbar-container">
         {/* Brand Monogram & Name */}
-        <a href="#about" className="navbar-brand">
-          <div className="brand-logo-ring">
+        <a href="#about" className="navbar-brand min-w-0 flex items-center gap-2.5 sm:gap-3">
+          <div className="brand-logo-ring shrink-0">
             <span>OB</span>
             <div className="brand-status-dot" title="Available for hire"></div>
           </div>
-          <div className="brand-name-group">
-            <span className="brand-name">Obayed Bin Mahfuz</span>
-            <span className="brand-role">AI-Native Backend Engineer</span>
+          <div className="brand-name-group min-w-0 flex flex-col">
+            <span className="brand-name text-sm xs:text-base font-bold truncate">Obayed Bin Mahfuz</span>
+            <span className="brand-role text-xs text-slate-400 hidden sm:inline-block">AI-Native Backend Engineer</span>
           </div>
         </a>
 
@@ -72,10 +72,10 @@ function Navbar({ theme, toggleTheme }) {
         </nav>
 
         {/* Right Actions: Theme Toggle + CV + Hire Me */}
-        <div className="nav-actions">
+        <div className="nav-actions flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Dark / Light Mode Switch Button */}
           <button
-            className="theme-toggle-btn"
+            className="theme-toggle-btn w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-xl"
             onClick={toggleTheme}
             aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
             title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
@@ -86,7 +86,7 @@ function Navbar({ theme, toggleTheme }) {
           <a
             href={personalInfo.cvFile}
             download="CV_OF_OBAYED_BIN_MAHFUZ.pdf"
-            className="btn btn-secondary btn-nav-cv"
+            className="btn btn-secondary btn-nav-cv hidden xs:inline-flex items-center gap-1.5"
             title="Download Full Resume"
           >
             <FaDownload size={13} />
@@ -102,7 +102,7 @@ function Navbar({ theme, toggleTheme }) {
 
           {/* Mobile Hamburger Toggle */}
           <button
-            className="mobile-toggle-btn"
+            className="mobile-toggle-btn min-w-[44px] min-h-[44px] w-11 h-11 flex items-center justify-center rounded-lg"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >

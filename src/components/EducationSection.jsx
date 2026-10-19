@@ -1,6 +1,6 @@
 // src/components/EducationSection.jsx
 import React from "react";
-import { FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt, FaMedal, FaShieldAlt } from "react-icons/fa";
+import { FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt, FaMedal } from "react-icons/fa";
 import { educationData } from "../data/portfolioData";
 import "./EducationSection.css";
 
@@ -13,7 +13,7 @@ function EducationSection() {
           <div className="section-tag amber">Academic Foundation</div>
           <h2 className="section-title">Education &amp; Qualifications</h2>
           <p className="section-subtitle">
-            A solid academic background rooted in Computer Science &amp; Engineering from premier universities, backed by the discipline of Sylhet Cadet College.
+            A solid academic background rooted in Computer Science &amp; Engineering from premier universities with rigorous technical and analytical foundations.
           </p>
         </div>
 
@@ -49,33 +49,6 @@ function EducationSection() {
               <p className="edu-description">{edu.description}</p>
             </div>
           ))}
-        </div>
-
-        {/* Sylhet Cadet College Discipline Feature Box */}
-        <div className="cadet-spotlight-box glass-card">
-          <div className="cadet-icon-col">
-            <div className="cadet-shield-icon">
-              <FaShieldAlt size={32} />
-            </div>
-          </div>
-          <div className="cadet-text-col">
-            <div className="cadet-tag">Military Boarding Heritage</div>
-            <h3 className="cadet-title">The Cadet College Foundation: Discipline &amp; Rigor</h3>
-            <ul className="cadet-bullets-list">
-              <li className="cadet-bullet-item">
-                <span className="cadet-bullet-marker">▹</span>
-                <span><strong>Rigorous Discipline &amp; Punctuality:</strong> Six years of military boarding education instilling exceptional accountability and strict deadline execution.</span>
-              </li>
-              <li className="cadet-bullet-item">
-                <span className="cadet-bullet-marker">▹</span>
-                <span><strong>Mental Resilience Under Pressure:</strong> Composed, methodical problem-solving during high-stress production incidents and rapid release cycles.</span>
-              </li>
-              <li className="cadet-bullet-item">
-                <span className="cadet-bullet-marker">▹</span>
-                <span><strong>Ethical Integrity &amp; Leadership:</strong> Servant leadership foundation ensuring seamless, transparent collaboration with cross-functional global teams.</span>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>

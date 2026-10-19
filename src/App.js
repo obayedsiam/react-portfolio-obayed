@@ -43,11 +43,11 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App w-full max-w-full overflow-x-hidden min-h-screen relative">
       {/* Navigation Header with Dark/Light Toggle */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         {/* 1. Hero Section: Bio, Dynamic Typing, Resume Download, Badges & Zoomable Photo */}
         <HeroSection />
 
@@ -66,7 +66,7 @@ function App() {
         {/* 6. Featured Projects: BANBEIS IEIMS, BanglaBook, Travel Booking, IoT */}
         <ProjectsSection />
 
-        {/* 7. Education & Cadet College Background: IUT M.Sc., BRACU, Sylhet Cadet College */}
+        {/* 7. Education & Academic Background: IUT M.Sc., BRACU */}
         <EducationSection />
 
         {/* 9. Interactive Contact & Inquiry: Direct Actions, WhatsApp, Form */}

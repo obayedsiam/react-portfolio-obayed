@@ -139,6 +139,9 @@
 }
 
 /* Reset & Basics */
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -148,6 +151,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--nav-height) + 20px);
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body, #root, .App {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -158,9 +167,13 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Ambient Background Glow Effects */
@@ -321,6 +334,7 @@ code, pre {
   justify-content: center;
   gap: 10px;
   padding: 13px 26px;
+  min-height: 44px;
   border-radius: 12px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -428,13 +442,41 @@ code, pre {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 18px;
+    padding: 0 16px;
   }
   .section {
-    padding: 60px 0;
+    padding: 55px 0;
   }
   .btn {
-    padding: 11px 20px;
+    padding: 11px 18px;
     font-size: 0.9rem;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+  .section {
+    padding: 45px 0;
+  }
+  .section-header {
+    margin-bottom: 28px;
+  }
+  .section-tag {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.86rem;
+    min-height: 44px;
   }
 }

@@ -53,6 +53,8 @@
 /* Timeline Card */
 .timeline-card {
   flex-grow: 1;
+  min-width: 0;
+  width: 100%;
   padding: 22px 24px;
   margin-bottom: 28px;
   border-radius: 18px;
@@ -217,6 +219,20 @@
     display: none;
   }
   .timeline-card {
-    padding: 20px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+  }
+  .job-role {
+    font-size: 1rem;
+  }
+  .job-summary {
+    font-size: 0.83rem;
+  }
+  .achievement-item {
+    font-size: 0.79rem;
+  }
+  .job-tech-pill {
+    font-size: 0.74rem;
+    padding: 3px 10px;
   }
 }

@@ -14,6 +14,8 @@
 /* Left: Contact Info Card */
 .contact-card {
   padding: 36px 30px;
+  min-width: 0;
+  width: 100%;
 }
 
 .contact-card-title {
@@ -40,6 +42,8 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   margin-bottom: 14px;
   transition: all var(--transition-fast);
+  min-width: 0;
+  width: 100%;
 }
 
 .contact-detail-row:hover {
@@ -50,6 +54,8 @@
 .detail-icon {
   width: 44px;
   height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -76,6 +82,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -95,6 +102,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   transition: color var(--transition-fast);
+  min-width: 0;
 }
 
 .detail-value:hover {
@@ -105,6 +113,7 @@
   font-size: 0.92rem;
   font-weight: 600;
   color: #fff;
+  min-width: 0;
 }
 
 .detail-subtext {
@@ -122,11 +131,14 @@
   color: var(--text-muted);
   cursor: pointer;
   padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
   transition: all var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .btn-copy-icon:hover {
@@ -140,16 +152,20 @@
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin-top: 26px;
+  width: 100%;
 }
 
 .quick-action-btn {
   padding: 12px;
   font-size: 0.9rem;
+  min-height: 44px;
 }
 
 /* Right: Form Card */
 .form-card {
   padding: 36px 30px;
+  min-width: 0;
+  width: 100%;
 }
 
 .form-title {
@@ -170,12 +186,14 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 100%;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  width: 100%;
 }
 
 .form-label {
@@ -187,12 +205,14 @@
 /* Project Type Selector */
 .project-type-selector {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 115px), 1fr));
   gap: 8px;
+  width: 100%;
 }
 
 .type-select-btn {
-  padding: 8px 12px;
+  padding: 10px 12px;
+  min-height: 44px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
@@ -203,6 +223,9 @@
   cursor: pointer;
   transition: all var(--transition-fast);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .type-select-btn:hover {
@@ -221,17 +244,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  width: 100%;
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
+  box-sizing: border-box;
   padding: 12px 16px;
+  min-height: 44px;
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid var(--border-subtle);
   color: #fff;
   font-family: var(--font-sans);
-  font-size: 0.92rem;
+  font-size: 1rem;
   transition: all var(--transition-fast);
   outline: none;
 }
@@ -249,6 +275,7 @@
 
 .form-textarea {
   resize: vertical;
+  min-height: 100px;
 }
 
 .form-actions-row {
@@ -256,6 +283,7 @@
   gap: 14px;
   margin-top: 8px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .btn-submit-inquiry {
@@ -271,5 +299,29 @@
   }
   .quick-actions-bar {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-card, .form-card {
+    padding: 22px 18px;
+  }
+  .contact-card-title, .form-title {
+    font-size: 1.15rem;
+  }
+  .contact-card-desc, .form-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+  .contact-detail-row {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .form-actions-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-actions-row .btn {
+    width: 100%;
   }
 }

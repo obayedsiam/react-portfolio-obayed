@@ -14,6 +14,7 @@
 
 .research-filter-btn {
   padding: 9px 20px;
+  min-height: 44px;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
@@ -23,6 +24,9 @@
   font-family: var(--font-sans);
   cursor: pointer;
   transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .research-filter-btn:hover {
@@ -39,15 +43,18 @@
 
 .research-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 24px;
+  width: 100%;
 }
 
 .research-card {
-  padding: 32px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   border-color: rgba(168, 85, 247, 0.2);
+  min-width: 0;
+  width: 100%;
 }
 
 .research-card:hover {
@@ -196,4 +203,21 @@
   background: rgba(124, 58, 237, 0.08);
   border-color: rgba(124, 58, 237, 0.2);
   color: #6b21a8;
+}
+
+@media (max-width: 640px) {
+  .research-filters {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .research-filter-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .research-card {
+    padding: 20px 18px;
+  }
+  .research-paper-title {
+    font-size: 0.98rem;
+  }
 }

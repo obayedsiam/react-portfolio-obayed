@@ -6,6 +6,9 @@
   padding-top: 70px;
   position: relative;
   z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .footer-container {
@@ -13,6 +16,8 @@
   grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 40px;
   padding-bottom: 50px;
+  width: 100%;
+  min-width: 0;
 }
 
 .footer-brand {
@@ -53,12 +58,15 @@
 .footer-socials {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .footer-socials a {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-subtle);
   display: flex;
@@ -87,13 +95,17 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .footer-links-list a {
   font-size: 0.9rem;
   color: var(--text-muted);
   transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 2px 0;
 }
 
 .footer-links-list a:hover {
@@ -112,6 +124,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
+  min-height: 44px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-subtle);

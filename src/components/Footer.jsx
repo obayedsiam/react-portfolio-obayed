@@ -46,6 +46,7 @@ function Footer() {
             <li><a href="#solutions">Why Hire Me</a></li>
             <li><a href="#skills">Tech Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#collaboration">Global Collaboration</a></li>
           </ul>
         </div>
 

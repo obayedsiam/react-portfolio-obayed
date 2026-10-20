@@ -4,8 +4,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaDownload,
-  FaArrowRight,
-  FaWhatsapp
+  FaArrowRight
 } from "react-icons/fa";
 import { SiLeetcode, SiWordpress } from "react-icons/si";
 import { personalInfo } from "../data/portfolioData";
@@ -99,14 +98,8 @@ function HeroSection() {
             <a href="#projects" className="btn btn-secondary">
               Explore Projects <FaArrowRight size={13} />
             </a>
-            <a
-              href={personalInfo.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-emerald btn-whatsapp"
-              title="Chat on WhatsApp"
-            >
-              <FaWhatsapp size={17} /> WhatsApp
+            <a href="#contact" className="btn btn-outline-primary">
+              Get in Touch
             </a>
           </div>
 

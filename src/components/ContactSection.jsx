@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import {
   FaEnvelope,
   FaPhoneAlt,
-  FaWhatsapp,
   FaMapMarkerAlt,
   FaClock,
   FaCopy,
@@ -64,7 +63,7 @@ function ContactSection({ selectedProjectType, showToast }) {
     const text = `Name: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\nTimeline: ${formData.timeline}\nMessage: ${formData.message}`;
     navigator.clipboard.writeText(text);
     if (showToast) {
-      showToast("Inquiry text copied! You can paste it into email, LinkedIn, or WhatsApp.");
+      showToast("Inquiry text copied! You can paste it into your email or message.");
     }
   };
 
@@ -76,7 +75,7 @@ function ContactSection({ selectedProjectType, showToast }) {
           <div className="section-tag emerald">Let's Build Together</div>
           <h2 className="section-title">Start a Conversation</h2>
           <p className="section-subtitle">
-            Whether you have a remote job opening, a freelance project, or an enterprise challenge, I'm ready to bring high-impact results.
+            Whether you have a remote engineering role, a high-concurrency backend contract, or an AI systems challenge, I'm ready to deliver high-impact results.
           </p>
         </div>
 
@@ -86,7 +85,7 @@ function ContactSection({ selectedProjectType, showToast }) {
             <div className="contact-card glass-card">
               <h3 className="contact-card-title">Direct Communication</h3>
               <p className="contact-card-desc">
-                Fast responses guaranteed within 24 hours. Feel free to reach out directly via email, phone, or WhatsApp.
+                Fast responses guaranteed within 24 hours. Feel free to reach out directly via email or phone.
               </p>
 
               {/* Contact Item 1: Email */}
@@ -95,7 +94,7 @@ function ContactSection({ selectedProjectType, showToast }) {
                   <FaEnvelope size={17} />
                 </div>
                 <div className="detail-content">
-                  <span className="detail-label">Primary Email</span>
+                  <span className="detail-label">Direct Email</span>
                   <a href={`mailto:${personalInfo.email}`} className="detail-value">
                     {personalInfo.email}
                   </a>
@@ -109,34 +108,14 @@ function ContactSection({ selectedProjectType, showToast }) {
                 </button>
               </div>
 
-              {/* Contact Item 2: Secondary Email */}
-              <div className="contact-detail-row">
-                <div className="detail-icon email">
-                  <FaEnvelope size={17} />
-                </div>
-                <div className="detail-content">
-                  <span className="detail-label">Direct Personal Email</span>
-                  <a href={`mailto:${personalInfo.secondaryEmail}`} className="detail-value">
-                    {personalInfo.secondaryEmail}
-                  </a>
-                </div>
-                <button
-                  className="btn-copy-icon"
-                  onClick={() => handleCopy(personalInfo.secondaryEmail, "Personal Email")}
-                  title="Copy personal email"
-                >
-                  {copiedType === "Personal Email" ? <FaCheckCircle color="#10b981" /> : <FaCopy />}
-                </button>
-              </div>
-
-              {/* Contact Item 3: Phone & WhatsApp */}
+              {/* Contact Item 2: Phone */}
               <div className="contact-detail-row">
                 <div className="detail-icon phone">
                   <FaPhoneAlt size={16} />
                 </div>
                 <div className="detail-content">
-                  <span className="detail-label">Phone &amp; WhatsApp</span>
-                  <a href={personalInfo.whatsappUrl} target="_blank" rel="noopener noreferrer" className="detail-value">
+                  <span className="detail-label">Direct Phone</span>
+                  <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="detail-value">
                     {personalInfo.phone}
                   </a>
                 </div>
@@ -149,7 +128,7 @@ function ContactSection({ selectedProjectType, showToast }) {
                 </button>
               </div>
 
-              {/* Contact Item 4: Location & Timezone */}
+              {/* Contact Item 3: Location & Timezone */}
               <div className="contact-detail-row">
                 <div className="detail-icon location">
                   <FaMapMarkerAlt size={17} />
@@ -168,18 +147,11 @@ function ContactSection({ selectedProjectType, showToast }) {
               {/* Quick Action Buttons Row */}
               <div className="quick-actions-bar">
                 <a
-                  href={personalInfo.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-emerald quick-action-btn"
-                >
-                  <FaWhatsapp size={18} /> Chat WhatsApp
-                </a>
-                <a
-                  href={`mailto:${personalInfo.email}?subject=Project%20Inquiry%20for%20Obayed%20Siam`}
+                  href={`mailto:${personalInfo.email}?subject=Project%20Inquiry%20for%20Obayed%20Bin%20Mahfuz`}
                   className="btn btn-primary quick-action-btn"
+                  style={{ width: "100%" }}
                 >
-                  <FaEnvelope size={16} /> Send Email
+                  <FaEnvelope size={16} /> Send Direct Email
                 </a>
               </div>
             </div>
@@ -296,7 +268,7 @@ function ContactSection({ selectedProjectType, showToast }) {
                     type="button"
                     onClick={handleCopyInquiry}
                     className="btn btn-secondary btn-copy-inquiry"
-                    title="Copy your message to paste into LinkedIn or WhatsApp"
+                    title="Copy your message to clipboard"
                   >
                     <FaCopy size={15} /> Copy Text
                   </button>

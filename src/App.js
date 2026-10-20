@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import ClientSolutionsSection from "./components/ClientSolutionsSection";
 import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
+import GlobalCollaborationSection from "./components/GlobalCollaborationSection";
 import ResearchSection from "./components/ResearchSection";
 import ProjectsSection from "./components/ProjectsSection";
 import EducationSection from "./components/EducationSection";
@@ -60,7 +61,10 @@ function App() {
         {/* 4. Professional Work Experience: Timeline with Architectural Deep-Dives */}
         <ExperienceSection />
 
-        {/* 5. Peer-Reviewed Academic Research: ACL '23 Toronto, ICERIE, ICIEV */}
+        {/* 5. Global Collaboration & Communication: Cross-Border Leadership, English, Agile */}
+        <GlobalCollaborationSection />
+
+        {/* 6. Peer-Reviewed Academic Research: ACL '23 Toronto, ICERIE, ICIEV */}
         <ResearchSection />
 
         {/* 6. Featured Projects: BANBEIS IEIMS, BanglaBook, Travel Booking, IoT */}

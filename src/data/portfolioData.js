@@ -19,9 +19,7 @@ export const personalInfo = {
   availability: "Available for Remote Full-Time Roles & High-Impact AI Backend Contracts",
   location: "Dhaka, Bangladesh (Flexible Global Remote Overlap)",
   email: "obayed.mahfuz@gmail.com",
-  secondaryEmail: "obayedsiam@gmail.com",
   phone: "+880 1534 750194",
-  whatsappUrl: "https://wa.me/8801534750194",
   cvFile: cvFile,
   profilePic: profilePic,
   socialLinks: {
@@ -444,7 +442,7 @@ export const projectsData = [
     features: [
       "100% responsive cross-device layout with ultra-sleek obsidian dark theme",
       "Interactive project filtering, expandable career accordions, and live clipboard toasts",
-      "Direct CV download integration, WhatsApp chat CTA, and inquiry generator",
+      "Direct CV download integration, interactive inquiry generator, and direct email system",
       "Zero heavyweight CSS frameworks: ultra-fast pure CSS architecture"
     ],
     tech: ["React.js", "Vanilla CSS", "React Icons", "SEO", "Responsive Design"],
@@ -465,6 +463,86 @@ export const projectsData = [
     tech: ["Android SDK", "Java", "SQLite", "XML Layouts"],
     clientType: "Mobile Utility",
     icon: "phone"
+  }
+];
+
+export const globalCollaborationData = [
+  {
+    id: "cross-border-leadership",
+    title: "Cross-Border Engineering Leadership",
+    badge: "Multinational Engineering",
+    color: "cyan",
+    icon: "globe",
+    description: "Proven track record collaborating across two multinational engineering teams, working directly with distributed stakeholders and developers in Japan, Austria, South Korea, India, and Vietnam.",
+    countries: [
+      { name: "Japan", flag: "🇯🇵" },
+      { name: "Austria", flag: "🇦🇹" },
+      { name: "South Korea", flag: "🇰🇷" },
+      { name: "India", flag: "🇮🇳" },
+      { name: "Vietnam", flag: "🇻🇳" }
+    ],
+    highlights: [
+      "Aligned distributed offshore and onshore development teams across BJIT and SEBPO",
+      "Navigated multicultural work environments with cultural empathy and proactive alignment",
+      "Delivered high-concurrency microservices meeting stringent enterprise international SLAs"
+    ]
+  },
+  {
+    id: "english-proficiency",
+    title: "Professional English Proficiency",
+    badge: "Full Professional Fluency",
+    color: "purple",
+    icon: "language",
+    description: "Advanced fluency across spoken, written, and technical documentation contexts—enabling seamless asynchronous and synchronous communication across time zones.",
+    tags: [
+      "Spoken & Written Fluency",
+      "Technical Architecture Docs",
+      "Asynchronous Precision",
+      "RFC & API Specs"
+    ],
+    highlights: [
+      "Authored peer-reviewed NLP research paper presented at ACL Findings 2023 (Toronto, Canada)",
+      "Writes high-clarity Architecture Decision Records (ADRs), API schemas, and onboarding playbooks",
+      "Communicates complex engineering tradeoffs with clarity and executive-level conciseness"
+    ]
+  },
+  {
+    id: "client-management",
+    title: "Real-Time Client & Stakeholder Management",
+    badge: "Stakeholder Alignment",
+    color: "emerald",
+    icon: "handshake",
+    description: "Direct experience in live customer handling, requirement gathering, incident resolution, and translating complex technical workflows into clear business value.",
+    tags: [
+      "Live Customer Handling",
+      "Requirement Gathering",
+      "Production Incident Lead",
+      "Business-Tech Translation"
+    ],
+    highlights: [
+      "Conducted live requirement discovery sessions directly with foreign clients and product owners",
+      "Led high-severity production incident triage, RCA (Root Cause Analysis), and resolution bridges",
+      "Bridged the gap between non-technical business KPIs and deep backend architecture roadmaps"
+    ]
+  },
+  {
+    id: "agile-workflows",
+    title: "Agile Distributed Workflows",
+    badge: "High-Velocity Delivery",
+    color: "amber",
+    icon: "sync",
+    description: "Adept at cross-cultural team alignment, sprint ceremonies, collaborative code reviews, and technical handoffs in multi-time-zone environments.",
+    tags: [
+      "Scrum & Kanban Ceremonies",
+      "Async Code Reviews",
+      "Time-Zone Overlap",
+      "Zero-Downtime Handoffs"
+    ],
+    highlights: [
+      "Active participant & facilitator in cross-border daily standups, sprint planning, and retrospectives",
+      "Conducts rigorous pull-request reviews focusing on clean architecture, security, and knowledge transfer",
+      "Operates with flexible working hours guaranteeing extensive overlap with EMEA, APAC, and US teams"
+    ]
   }
 ];
 
@@ -492,7 +570,7 @@ export const educationData = [
     institution: "Sylhet Cadet College",
     location: "Sylhet, Bangladesh",
     period: "2010 – 2011",
-    result: "GPA: 5.00 / 5.00 (Golden)",
+    result: "GPA: 5.00 / 5.00",
     description: "Military boarding cadet education emphasizing extreme self-discipline, time management, leadership under pressure, and academic excellence.",
     badge: "Ex-Cadet (HSC)"
   },
@@ -501,7 +579,7 @@ export const educationData = [
     institution: "Sylhet Cadet College",
     location: "Sylhet, Bangladesh",
     period: "2008 – 2009",
-    result: "GPA: 5.00 / 5.00 (Golden)",
+    result: "GPA: 5.00 / 5.00",
     description: "Rigorous cadet training instilling physical fitness, ethical integrity, public speaking, and strong analytical problem-solving foundation.",
     badge: "Ex-Cadet (SSC)"
   }

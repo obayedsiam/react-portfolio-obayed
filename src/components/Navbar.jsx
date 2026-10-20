@@ -34,6 +34,7 @@ function Navbar({ theme, toggleTheme }) {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Experience", href: "#experience" },
+    { name: "Collaboration", href: "#collaboration" },
     { name: "Research", href: "#research" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" }
@@ -46,15 +47,19 @@ function Navbar({ theme, toggleTheme }) {
   return (
     <header className={`navbar-header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container navbar-container flex items-center justify-between w-full px-4">
-        {/* Brand Monogram & Name */}
-        <a href="#about" className="navbar-brand min-w-0 max-w-[200px] sm:max-w-none flex items-center gap-2 sm:gap-3 shrink">
+        {/* Brand Monogram, Name & Title Badge */}
+        <a href="#about" className="navbar-brand min-w-0 max-w-[210px] xs:max-w-[260px] sm:max-w-none flex items-center gap-2 sm:gap-2.5 shrink">
           <div className="brand-logo-ring shrink-0">
             <span>OB</span>
             <div className="brand-status-dot" title="Available for hire"></div>
           </div>
-          <div className="brand-name-group min-w-0 flex flex-col">
-            <span className="brand-name text-xs xs:text-sm sm:text-base font-bold truncate">Obayed Bin Mahfuz</span>
-            <span className="brand-role text-xs text-slate-400 hidden sm:inline-block truncate">AI-Native Backend Engineer</span>
+          <div className="brand-name-group min-w-0 flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+            <span className="brand-name text-xs sm:text-sm md:text-base font-bold truncate">
+              Obayed Bin Mahfuz
+            </span>
+            <span className="brand-title-badge text-[10px] sm:text-xs font-semibold px-1.5 py-0.5 rounded-md border border-sky-400/30 bg-sky-500/10 text-sky-400 shrink-0 whitespace-nowrap">
+              (AI Native Backend Engineer)
+            </span>
           </div>
         </a>
 

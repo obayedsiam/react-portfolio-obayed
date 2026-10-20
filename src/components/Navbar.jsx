@@ -57,9 +57,6 @@ function Navbar({ theme, toggleTheme }) {
             <span className="brand-name text-xs sm:text-sm md:text-base font-bold truncate">
               Obayed Bin Mahfuz
             </span>
-            <span className="brand-title-badge text-[10px] sm:text-xs font-semibold px-1.5 py-0.5 rounded-md border border-sky-400/30 bg-sky-500/10 text-sky-400 shrink-0 whitespace-nowrap">
-              (AI Native Backend Engineer)
-            </span>
           </div>
         </a>
 

@@ -45,16 +45,16 @@ function Navbar({ theme, toggleTheme }) {
 
   return (
     <header className={`navbar-header ${isScrolled ? "scrolled" : ""}`}>
-      <div className="container navbar-container">
+      <div className="container navbar-container flex items-center justify-between w-full px-4">
         {/* Brand Monogram & Name */}
-        <a href="#about" className="navbar-brand min-w-0 flex items-center gap-2.5 sm:gap-3">
+        <a href="#about" className="navbar-brand min-w-0 max-w-[200px] sm:max-w-none flex items-center gap-2 sm:gap-3 shrink">
           <div className="brand-logo-ring shrink-0">
             <span>OB</span>
             <div className="brand-status-dot" title="Available for hire"></div>
           </div>
           <div className="brand-name-group min-w-0 flex flex-col">
-            <span className="brand-name text-sm xs:text-base font-bold truncate">Obayed Bin Mahfuz</span>
-            <span className="brand-role text-xs text-slate-400 hidden sm:inline-block">AI-Native Backend Engineer</span>
+            <span className="brand-name text-xs xs:text-sm sm:text-base font-bold truncate">Obayed Bin Mahfuz</span>
+            <span className="brand-role text-xs text-slate-400 hidden sm:inline-block truncate">AI-Native Backend Engineer</span>
           </div>
         </a>
 
@@ -71,11 +71,11 @@ function Navbar({ theme, toggleTheme }) {
           </ul>
         </nav>
 
-        {/* Right Actions: Theme Toggle + CV + Hire Me */}
-        <div className="nav-actions flex items-center gap-2 sm:gap-3 shrink-0">
+        {/* Right Actions: Theme Toggle + CV + Hire Me + Mobile Toggle */}
+        <div className="nav-actions flex items-center gap-1.5 sm:gap-3 shrink-0">
           {/* Dark / Light Mode Switch Button */}
           <button
-            className="theme-toggle-btn w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-xl"
+            className="theme-toggle-btn w-9 h-9 sm:w-10 sm:h-10 min-w-[36px] sm:min-w-[40px] flex items-center justify-center rounded-xl shrink-0"
             onClick={toggleTheme}
             aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
             title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
@@ -86,7 +86,7 @@ function Navbar({ theme, toggleTheme }) {
           <a
             href={personalInfo.cvFile}
             download="CV_OF_OBAYED_BIN_MAHFUZ.pdf"
-            className="btn btn-secondary btn-nav-cv hidden xs:inline-flex items-center gap-1.5"
+            className="btn btn-secondary btn-nav-cv hidden sm:inline-flex items-center gap-1.5 shrink-0"
             title="Download Full Resume"
           >
             <FaDownload size={13} />
@@ -95,16 +95,17 @@ function Navbar({ theme, toggleTheme }) {
 
           <a
             href="#contact"
-            className="btn btn-primary btn-nav-hire"
+            className="btn btn-primary btn-nav-hire hidden lg:inline-flex shrink-0"
           >
             Hire Me
           </a>
 
           {/* Mobile Hamburger Toggle */}
           <button
-            className="mobile-toggle-btn min-w-[44px] min-h-[44px] w-11 h-11 flex items-center justify-center rounded-lg"
+            className="mobile-toggle-btn flex lg:hidden shrink-0 min-w-[40px] min-h-[40px] sm:min-w-[44px] sm:min-h-[44px] w-10 h-10 sm:w-11 sm:h-11 items-center justify-center rounded-lg"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
@@ -112,7 +113,7 @@ function Navbar({ theme, toggleTheme }) {
       </div>
 
       {/* Mobile Drawer Menu */}
-      <div className={`mobile-nav-drawer ${mobileMenuOpen ? "open" : ""}`}>
+      <div className={`mobile-nav-drawer w-full ${mobileMenuOpen ? "open" : ""}`} id="mobile-nav-menu">
         <div className="mobile-theme-bar">
           <span className="mobile-theme-label">Theme Mode:</span>
           <button
